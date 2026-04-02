@@ -18,3 +18,362 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 @import "bootstrapComponents";
 
 // 5. Du kan lave styling her...
+
+
+
+
+
+
+
+
+
+
+
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.background span {
+  width: 36vmin;
+  height: 36vmin;
+  border-radius: 36vmin;
+  backface-visibility: hidden;
+  position: absolute;
+  animation: move;
+  animation-duration: 16;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+.background span:nth-child(0) {
+  color: #adebff;
+  top: 19%;
+  left: 16%;
+  animation-duration: 101s;
+  animation-delay: -327s;
+  transform-origin: -6vw 10vh;
+  box-shadow: -72vmin 0 9.680154668671786vmin currentColor;
+}
+.background span:nth-child(1) {
+  color: #583C87;
+  top: 19%;
+  left: 93%;
+  animation-duration: 28s;
+  animation-delay: -111s;
+  transform-origin: 1vw 14vh;
+  box-shadow: -72vmin 0 9.094404120675264vmin currentColor;
+}
+.background span:nth-child(2) {
+  color: #583C87;
+  top: 60%;
+  left: 96%;
+  animation-duration: 185s;
+  animation-delay: -318s;
+  transform-origin: 4vw 0vh;
+  box-shadow: -72vmin 0 9.753744149979019vmin currentColor;
+}
+.background span:nth-child(3) {
+  color: #e55dcc;
+  top: 73%;
+  left: 24%;
+  animation-duration: 345s;
+  animation-delay: -219s;
+  transform-origin: 19vw 5vh;
+  box-shadow: -72vmin 0 9.777528500954688vmin currentColor;
+}
+.background span:nth-child(4) {
+  color: #adebff;
+  top: 76%;
+  left: 1%;
+  animation-duration: 228s;
+  animation-delay: -166s;
+  transform-origin: 14vw 25vh;
+  box-shadow: 72vmin 0 9.390876371444955vmin currentColor;
+}
+.background span:nth-child(5) {
+  color: #e55dcc;
+  top: 65%;
+  left: 82%;
+  animation-duration: 165s;
+  animation-delay: -134s;
+  transform-origin: -6vw 20vh;
+  box-shadow: 72vmin 0 9.483835103838217vmin currentColor;
+}
+.background span:nth-child(6) {
+  color: #adebff;
+  top: 80%;
+  left: 23%;
+  animation-duration: 254s;
+  animation-delay: -326s;
+  transform-origin: -19vw -21vh;
+  box-shadow: -72vmin 0 9.746715043318485vmin currentColor;
+}
+.background span:nth-child(7) {
+  color: #adebff;
+  top: 52%;
+  left: 26%;
+  animation-duration: 271s;
+  animation-delay: -245s;
+  transform-origin: -24vw -24vh;
+  box-shadow: 72vmin 0 9.93374443713247vmin currentColor;
+}
+.background span:nth-child(8) {
+  color: #adebff;
+  top: 22%;
+  left: 19%;
+  animation-duration: 115s;
+  animation-delay: -284s;
+  transform-origin: 14vw -3vh;
+  box-shadow: 72vmin 0 9.269191219683691vmin currentColor;
+}
+.background span:nth-child(9) {
+  color: #e55dcc;
+  top: 98%;
+  left: 29%;
+  animation-duration: 237s;
+  animation-delay: -70s;
+  transform-origin: 20vw 3vh;
+  box-shadow: -72vmin 0 9.133335884288707vmin currentColor;
+}
+.background span:nth-child(10) {
+  color: #583C87;
+  top: 60%;
+  left: 45%;
+  animation-duration: 254s;
+  animation-delay: -312s;
+  transform-origin: 25vw 13vh;
+  box-shadow: -72vmin 0 9.840478172345323vmin currentColor;
+}
+.background span:nth-child(11) {
+  color: #583C87;
+  top: 2%;
+  left: 35%;
+  animation-duration: 153s;
+  animation-delay: -114s;
+  transform-origin: 25vw -13vh;
+  box-shadow: 72vmin 0 9.348244081575992vmin currentColor;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  line-height: 1.6;
+  color: #fff;
+  background: #000;
+  font-size: 18px;
+  font-family: "-apple-system", "Roboto", sans-serif;
+}
+
+header {
+  position: relative;
+  z-index: 99999;
+
+  #logo {
+    position: fixed;
+    top: 30px;
+    left: 0;
+    right: 0;
+    width: 100px;
+    margin: 0 auto;
+    opacity: 1;
+    transition: .3s ease .6s;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100px;
+    width: 500px;
+    margin: 0 auto;
+
+    position: fixed;
+    top: 120px;
+    left: 0;
+    right: 0;
+
+    background: rgba(255,255,255,.05);
+    border-radius: 200px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,.06);
+
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 20px;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+      transition: .3s ease;
+    }
+
+    button {
+      -webkit-appearance: none;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+
+      width: 60px;
+      height: 60px;
+      border-radius: 100%;
+
+      background: rgba(0,0,0,.3);
+      border: 1px solid rgba(255,255,255,.1);
+      cursor: pointer;
+
+      transform: scale(0);
+      transition: .3s ease;
+
+      span {
+        width: 40%;
+        height: 2px;
+        margin: 5px auto;
+        display: block;
+        background: #fff;
+
+        transform: scaleX(0);
+        transition: .6s ease;
+      }
+    }
+  }
+}
+
+header.sticky {
+  #logo {
+    top: 0;
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  nav {
+    top: 20px;
+    width: 90px;
+    height: 90px;
+
+    button {
+      transform: scale(1);
+
+      span {
+        transform: scaleX(1);
+      }
+    }
+
+    a {
+      opacity: 0;
+      transform: scale(.3);
+      padding: 0;
+    }
+  }
+}
+
+
+
+
+
+/* Mobile menu (uden at ændre desktop design) */
+@media (max-width: 768px) {
+
+  header nav {
+    width: 90vw;
+    height: 70px;
+    top: 20px;
+    border-radius: 50px;
+  }
+
+  header nav a {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  header nav button {
+    width: 50px;
+    height: 50px;
+  }
+
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.portfolio {
+  height: 100vh; /* fylder hele skærmen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+.portfolio {
+  margin: 50px;
+}
+
+
+
+header {
+  position: sticky;
+  top: 20px;
+}
+
+
+
+
+
+
+
+
+header nav button {
+  z-index: 1000;
+}
+
+
+
+header {
+  margin-top: 100vh; /* eller fx 90vh hvis du vil justere */
+}
