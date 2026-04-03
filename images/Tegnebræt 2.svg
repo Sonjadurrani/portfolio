@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lag_1" data-name="Lag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266.01 95.44">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Apple-Chancery, 'Apple Chancery';
+        font-size: 72px;
+      }
+
+      .cls-2 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-3 {
+        font-family: BebasNeueBold, 'Bebas Neue';
+        font-size: 24px;
+      }
+    </style>
+  </defs>
+  <text class="cls-3" transform="translate(-.75 16.8)"><tspan x="0" y="0">MY</tspan></text>
+  <text class="cls-1" transform="translate(-4.99 65.77)"><tspan class="cls-2" x="0" y="0">P</tspan><tspan x="47.29" y="0">ortfolio.</tspan></text>
+</svg>

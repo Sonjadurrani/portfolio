@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Lag_1" data-name="Lag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 265.58 73.89">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: ArialMT, Arial;
+        font-size: 72px;
+      }
+
+      .cls-1, .cls-2 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        font-family: DINCondensed-Bold, 'DIN Condensed';
+        font-size: 24px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(-5.54 52.42)"><tspan x="0" y="0">Portfolio.</tspan></text>
+  <text class="cls-2" transform="translate(228.97 73.75)"><tspan x="0" y="0">2026</tspan></text>
+</svg>
