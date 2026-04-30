@@ -102,3 +102,10 @@ carousel.addEventListener("scroll", () => {
 window.addEventListener("load", updateCards);
 
 
+
+
+
+
+
+
+

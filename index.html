@@ -186,41 +186,69 @@
 </section>
 
 
-<section class="contact" id="contact"></section>
 
-<section class="projects" id="projects">
 
-  <div class="carousel" id="carousel">
 
-    <a href="project1.html" class="card">
-      <img src="images/project1.png" alt="Project 1">
-    </a>
+<section class="project-case" id="projects">
 
-    <a href="project2.html" class="card active">
-      <img src="images/project2.png" alt="Project 2">
-    </a>
+  <div class="project-left">
+    <span class="project-number">01.</span>
 
-    <a href="cs.html" class="card">
-      <img src="images/cs.png" alt="Project 3">
-    </a>
+    <h2>ICDC Lisbon 2024</h2>
 
-    <a href="project4.html" class="card">
-      <img src="images/project4.png" alt="Project 4">
-    </a>
+    <p>
+      An entrepreneurial project where we developed and expanded an existing brand through visual identity and product design. We created artistic posters, worked with photography in studio (abaya), and explored merchandise concepts. The project also included building a WordPress webshop and planning marketing on Instagram.
+    </p>
+  </div>
 
-    <a href="project5.html" class="card">
-      <img src="images/project5.png" alt="Project 5">
-    </a>
+  <!-- BILLEDE 1 (normal højre side) -->
+  <div class="project-right">
+    <div class="project-image">
+      <img src="images/da.png" alt="">
+    </div>
+  </div>
 
+  <!-- 🔥 BILLEDE 2 (full width) -->
+  <div class="project-full">
+    <img src="images/galleri-2.png" alt="">
   </div>
 
 </section>
 
 
+<div class="project-divider"></div>
+
+<section class="project-case reverse">
+
+  <!-- TEKST (nu højre side) -->
+  <div class="project-left">
+    <span class="project-number">02.</span>
+
+    <h2>Project title</h2>
+
+    <p>
+      My 1st semester exam project, where I designed and developed a landing page for Connected Starters — an initiative for students interested in entrepreneurship. The focus was on creating a clear and motivating experience that makes it easy to get started.
+
+      I worked with the full process from research and user insights to design, testing, and coding.
+    </p>
+
+  </div>
+
+  <!-- BILLEDE (nu venstre side) -->
+  <div class="project-right">
+    <div class="project-image">
+      <img src="images/some.png" alt="">
+    </div>
+  </div>
+
+  <div class="project-full">
+    <img src="images/con.png" alt="">
+  </div>
 
 
 
 
+</section>
 
 <div id="page"></div>
 
@@ -244,7 +272,7 @@
       <a
               data-mdb-ripple-init
               class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
+              href="https://www.linkedin.com/in/sonja-durrani-b9583b398/"
               role="button"
               data-mdb-ripple-color="dark"
       ><i class="fab fa-linkedin"></i
@@ -253,7 +281,7 @@
       <a
               data-mdb-ripple-init
               class="btn btn-link btn-floating btn-lg text-body m-1"
-              href="#!"
+              href="https://github.com/Sonjadurrani"
               role="button"
               data-mdb-ripple-color="dark"
       ><i class="fab fa-github"></i
@@ -264,6 +292,31 @@
   <!-- Grid container -->
 
 </footer>
+
+<button id="scrollTopBtn">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const scrollBtn = document.getElementById("scrollTopBtn");
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollBtn.style.opacity = "1";
+                scrollBtn.style.pointerEvents = "auto";
+            } else {
+                scrollBtn.style.opacity = "0";
+                scrollBtn.style.pointerEvents = "none";
+            }
+        });
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+            });
+            });
+
+</script>
 
 <script src="app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
