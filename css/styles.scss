@@ -19,42 +19,38 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 // 5. Du kan lave styling her...
 
-
-
-
-
-
-
-
-
-
+/* Animation der roterer baggrunds elementerne */
 @keyframes move {
   100% {
     transform: translate3d(0, 0, 1px) rotate(360deg);
   }
 }
 
+/* Container til baggrund (ligger bag hele siden) */
 .background {
-  position: fixed;
-  inset: 0;
+  position: fixed; /* fast baggrund */
+  inset: 0; /* fylder hele skærmen */
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  overflow: hidden; /* skjuler overflow */
 }
 
+/* De animerede cirkler */
 .background span {
   width: 30vmin;
   height: 30vmin;
-  border-radius: 30vmin;
+  border-radius: 30vmin; /* gør dem runde */
   backface-visibility: hidden;
   position: absolute;
-  animation: move;
+
+  animation: move; /* bruger rotation animation */
   animation-duration: 41;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 
 
+/* Hver span har unik position, farve og animation → skaber dynamisk baggrund */
 .background span:nth-child(0) {
   color: #ade4ff;
   top: 73%;
@@ -64,6 +60,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 21vw -16vh;
   box-shadow: -60vmin 0 8.21987276817625vmin currentColor;
 }
+
 .background span:nth-child(1) {
   color: #ade4ff;
   top: 31%;
@@ -73,6 +70,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 14vw 22vh;
   box-shadow: -60vmin 0 8.216497249373662vmin currentColor;
 }
+
 .background span:nth-child(2) {
   color: #e55db3;
   top: 82%;
@@ -82,6 +80,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: -10vw -4vh;
   box-shadow: -60vmin 0 8.43979649984402vmin currentColor;
 }
+
 .background span:nth-child(3) {
   color: #c1a4f4;
   top: 2%;
@@ -91,6 +90,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 19vw 22vh;
   box-shadow: -60vmin 0 7.565245748569816vmin currentColor;
 }
+
 .background span:nth-child(4) {
   color: #e55db3;
   top: 19%;
@@ -100,6 +100,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 8vw 16vh;
   box-shadow: 60vmin 0 7.957764065596147vmin currentColor;
 }
+
 .background span:nth-child(5) {
   color: #c1a4f4;
   top: 75%;
@@ -109,6 +110,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 15vw 18vh;
   box-shadow: 60vmin 0 7.985654932913269vmin currentColor;
 }
+
 .background span:nth-child(6) {
   color: #ade4ff;
   top: 97%;
@@ -118,6 +120,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 8vw -24vh;
   box-shadow: -60vmin 0 8.037705878461509vmin currentColor;
 }
+
 .background span:nth-child(7) {
   color: #ade4ff;
   top: 88%;
@@ -127,6 +130,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 25vw 2vh;
   box-shadow: -60vmin 0 8.448932934764175vmin currentColor;
 }
+
 .background span:nth-child(8) {
   color: #c1a4f4;
   top: 18%;
@@ -136,6 +140,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 23vw 4vh;
   box-shadow: 60vmin 0 7.562851851759299vmin currentColor;
 }
+
 .background span:nth-child(9) {
   color: #c1a4f4;
   top: 59%;
@@ -145,6 +150,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: -14vw 20vh;
   box-shadow: -60vmin 0 8.168506392255935vmin currentColor;
 }
+
 .background span:nth-child(10) {
   color: #c1a4f4;
   top: 40%;
@@ -154,6 +160,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: -7vw 24vh;
   box-shadow: 60vmin 0 8.116874573910874vmin currentColor;
 }
+
 .background span:nth-child(11) {
   color: #c1a4f4;
   top: 71%;
@@ -163,6 +170,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 9vw 13vh;
   box-shadow: -60vmin 0 8.358269419847762vmin currentColor;
 }
+
 .background span:nth-child(12) {
   color: #c1a4f4;
   top: 71%;
@@ -172,6 +180,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: -23vw -9vh;
   box-shadow: -60vmin 0 7.519508673764832vmin currentColor;
 }
+
 .background span:nth-child(13) {
   color: #ade4ff;
   top: 6%;
@@ -181,6 +190,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: -23vw 18vh;
   box-shadow: 60vmin 0 7.612979505163363vmin currentColor;
 }
+
 .background span:nth-child(14) {
   color: #c1a4f4;
   top: 90%;
@@ -190,6 +200,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: -12vw 3vh;
   box-shadow: 60vmin 0 8.174473838359257vmin currentColor;
 }
+
 .background span:nth-child(15) {
   color: #e55db3;
   top: 10%;
@@ -199,6 +210,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 16vw 11vh;
   box-shadow: 60vmin 0 8.359399332326172vmin currentColor;
 }
+
 .background span:nth-child(16) {
   color: #ade4ff;
   top: 5%;
@@ -208,6 +220,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   transform-origin: 1vw -2vh;
   box-shadow: -60vmin 0 7.627800935342905vmin currentColor;
 }
+
 .background span:nth-child(17) {
   color: #c1a4f4;
   top: 33%;
@@ -242,33 +255,35 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 
 
-
-
+/* === GENEREL STYLING === */
 body {
-  line-height: 1.6;
-  color: #fff;
-  background: #ffffff;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif !important;
-  overflow-x: hidden;
-
+  line-height: 1.6; /* afstand mellem linjer */
+  color: #fff; /* standard tekstfarve */
+  background: #ffffff; /* baggrundsfarve */
+  font-size: 18px; /* grundstørrelse */
+  font-family: "Roboto", sans-serif !important; /* font */
+  overflow-x: hidden; /* fjerner horizontal scroll */
 }
 
+
+/* === HEADER / NAVBAR === */
 header {
   position: relative;
-  z-index: 99999;
+  z-index: 99999; /* sørger for den ligger over alt */
 
+  /* Logo i midten */
   #logo {
-    position: fixed;
+    position: fixed; /* følger scroll */
     top: 30px;
     left: 0;
     right: 0;
     width: 100px;
-    margin: 0 auto;
+    margin: 0 auto; /* centrerer */
     opacity: 1;
-    transition: .3s ease .6s;
+    transition: .3s ease .6s; /* smooth animation */
   }
 
+  /* Navigation bar */
   nav {
     display: flex;
     justify-content: center;
@@ -278,18 +293,19 @@ header {
     width: 500px;
     margin: 0 auto;
 
-    position: fixed;
+    position: fixed; /* ligger fast */
     top: 120px;
     left: 0;
     right: 0;
 
-    background: rgba(0, 0, 0, 0.35);
-    border-radius: 200px;
-    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.35); /* semi transparent */
+    border-radius: 200px; /* rund form */
+    backdrop-filter: blur(5px); /* glass effect */
     border: 1px solid rgba(255,255,255,.06);
 
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1); /* smooth animation */
 
+    /* Links i navbar */
     a {
       color: #fff;
       text-decoration: none;
@@ -301,6 +317,7 @@ header {
       transition: .3s ease;
     }
 
+    /* Menu knap */
     button {
       -webkit-appearance: none;
       position: absolute;
@@ -315,9 +332,10 @@ header {
       border: 1px solid rgba(255,255,255,.1);
       cursor: pointer;
 
-      transform: scale(0);
+      transform: scale(0); /* skjult som default */
       transition: .3s ease;
 
+      /* streger i menu ikon */
       span {
         width: 40%;
         height: 2px;
@@ -325,33 +343,40 @@ header {
         display: block;
         background: #fff;
 
-        transform: scaleX(0);
+        transform: scaleX(0); /* skjult */
         transition: .6s ease;
       }
     }
   }
 }
 
+
+/* === STICKY NAVBAR (aktiveres via JS) === */
 header.sticky {
+
+  /* logo ændrer sig */
   #logo {
     top: 0;
-    transform: scale(.8);
-    opacity: 0;
+    transform: scale(.8); /* bliver mindre */
+    opacity: 0; /* forsvinder */
   }
 
+  /* navbar ændrer størrelse */
   nav {
     top: 20px;
     width: 90px;
     height: 90px;
 
+    /* menu knap vises */
     button {
       transform: scale(1);
 
       span {
-        transform: scaleX(1);
+        transform: scaleX(1); /* streger bliver synlige */
       }
     }
 
+    /* links skjules */
     a {
       opacity: 0;
       transform: scale(.3);
@@ -363,35 +388,39 @@ header.sticky {
 
 
 
-
-/* Mobile menu (uden at ændre desktop design) */
+/* === MOBILE NAVIGATION === */
+/* Ændrer navbar layout på små skærme uden at påvirke desktop */
 @media (max-width: 768px) {
 
   header nav {
-    width: 90vw;
+    width: 90vw; /* fylder næsten hele bredden */
     height: 70px;
     top: 20px;
-    border-radius: 50px;
+    border-radius: 50px; /* mindre rund */
   }
 
   header nav a {
-    font-size: 12px;
+    font-size: 12px; /* mindre tekst */
     padding: 8px 10px;
   }
 
   header nav button {
     width: 50px;
-    height: 50px;
+    height: 50px; /* mindre menu knap */
   }
 
 }
 
+
+/* === BAGGRUND === */
 .background {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: -1; /* ligger bag alt content */
 }
 
+
+/* === HERO SECTION === */
 .portfolio {
   height: 100vh; /* fylder hele skærmen */
   display: flex;
@@ -399,43 +428,33 @@ header.sticky {
   align-items: center;
 }
 
-
-
-
-
+/* ekstra spacing */
 .portfolio {
   margin: 50px;
 }
 
 
-
+/* === HEADER POSITION === */
 header {
-  position: sticky;
+  position: sticky; /* bliver hængende ved scroll */
   top: 20px;
 }
 
 
-
-
-
-
-
-
+/* sørger for knap ligger øverst */
 header nav button {
   z-index: 1000;
 }
 
 
-
-
-
+/* === ABOUT SECTION === */
 .about {
   padding: 80px 5vw;
   background: #ffffff;
   color: #000;
 }
 
-/* TOP HEADLINE */
+/* headline styling */
 .about__top h1 {
   font-weight: 700;
   max-width: 900px;
@@ -443,27 +462,27 @@ header nav button {
   font-family: "Michroma", sans-serif;
 }
 
-/* GRID */
+/* grid layout */
 .about__grid {
   display: grid;
-  grid-template-columns: 1fr 1.2fr 1fr;
+  grid-template-columns: 1fr 1.2fr 1fr; /* 3 kolonner */
   gap: 60px;
   margin-top: 60px;
 }
 
-/* IMAGE */
+/* billede */
 .about__image img {
   width: 100%;
   object-fit: cover;
 }
 
-/* TEXT */
+/* tekst */
 .about__text p {
   margin-bottom: 20px;
   line-height: 1.6;
 }
 
-/* SIDE */
+/* side content */
 .about__side {
   display: flex;
   flex-direction: column;
@@ -474,12 +493,12 @@ header nav button {
   text-transform: uppercase;
 }
 
-/* CONTACT */
+/* kontakt */
 .about__contact {
   margin-top: 60px;
 }
 
-/* BOTTOM TEXT */
+/* bottom tekst */
 .about__bottom {
   margin-top: 80px;
   font-family: "Michroma", sans-serif;
@@ -490,14 +509,16 @@ header nav button {
   line-height: 1.1;
 }
 
-/* RESPONSIVE */
+
+/* === RESPONSIVE ABOUT === */
 @media (max-width: 900px) {
+
   .about__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* stack layout */
   }
 
   .about__image {
-    order: 1;
+    order: 1; /* billede først */
   }
 
   .about__text {
@@ -509,24 +530,30 @@ header nav button {
   }
 }
 
+
+/* === SCROLLING TEXT === */
 .Aboutme {
-  text-transform:uppercase;
+  text-transform: uppercase;
   font-family:'Anton', sans-serif;
-  font-size:2vw;
+  font-size: 2vw;
+
   display: inline-block;
   white-space: nowrap;
-  animation: floatText 70s infinite linear;
-  padding-left: 100%; /*Initial offset*/
+
+  animation: floatText 70s infinite linear; /* scrolling effekt */
+  padding-left: 100%; /* starter udenfor skærm */
+
   color: #ffffff;
   background: #000000;
-
 }
 
+/* pause animation ved hover */
 .Aboutme:hover  {
   animation-play-state: paused;
 }
 
 
+/* animation */
 @keyframes floatText {
   to {
     transform: translateX(-100%);
@@ -539,60 +566,61 @@ header nav button {
 
 
 
-
-
-
-
-
-
-
+/* === PROJECTS SECTION === */
 .projects {
-  height: 100vh;
+  height: 100vh; /* fylder hele skærmen */
   display: flex;
-  align-items: center;
+  align-items: center; /* centrerer vertikalt */
   overflow: hidden;
-  background: #000;
+  background: #000; /* mørk baggrund */
 }
 
+
+/* === CAROUSEL === */
 .carousel {
-  display: flex;
+  display: flex; /* horisontal layout */
   gap: 40px;
 
-  padding: 0 20px; /* 🔥 FIX */
+  padding: 0 20px; /* luft i siderne */
   margin: 0 auto;
 
   max-width: 100%;
-  overflow-x: auto;
+  overflow-x: auto; /* scroll horisontalt */
 
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; /* snap til cards */
 }
 
+/* skjuler scrollbar */
 .carousel::-webkit-scrollbar {
   display: none;
 }
+
+
+/* === CARD (version 1) === */
 .card {
   position: relative;
-  overflow: hidden; /* 🔥 MEGET vigtig */
+  overflow: hidden; /* vigtigt for billeder */
 
-  flex: 0 0 280px;
+  flex: 0 0 280px; /* fast bredde */
   height: 400px;
   border-radius: 25px;
 
   background: #0a0a0a;
   color: #fff;
 
-  display: block; /* 🔥 ændret fra flex */
+  display: block; /* ikke flex */
 
   scroll-snap-align: center;
 
   transition: transform 0.4s ease, opacity 0.4s ease;
 
-  transform: scale(0.7) rotateY(20deg);
+  transform: scale(0.7) rotateY(20deg); /* 3D effekt */
   opacity: 0.3;
 
   border: 1px solid rgba(255,255,255,0.1);
 }
 
+/* billede i card */
 .card img {
   position: absolute;
   inset: 0;
@@ -600,29 +628,33 @@ header nav button {
   width: 100%;
   height: 100%;
 
-  object-fit: cover; /* 🔥 vigtig */
+  object-fit: cover; /* fylder hele card */
 }
 
+/* aktiv card */
 .card.active {
   transform: scale(1);
   opacity: 1;
 }
 
 
+/* === PROJECTS (OVERSKRIVER STIL) === */
 .projects {
   height: 100vh;
   display: flex;
   align-items: center;
-  background: #ffffff;
+  background: #ffffff; /* ændrer baggrund til hvid */
   overflow: hidden;
-  perspective: 1200px;
+  perspective: 1200px; /* giver 3D dybde */
 }
 
+
+/* === CAROUSEL (gentaget) === */
 .carousel {
   display: flex;
   gap: 40px;
 
-  padding: 0 20px; /* 🔥 FIX */
+  padding: 0 20px;
   margin: 0 auto;
 
   max-width: 100%;
@@ -635,6 +667,8 @@ header nav button {
   display: none;
 }
 
+
+/* === CARD (version 2) === */
 .card {
   flex: 0 0 280px;
   height: 400px;
@@ -644,7 +678,7 @@ header nav button {
   color: #fff;
   font-size: 60px;
 
-  display: flex;
+  display: flex; /* centrer content */
   align-items: center;
   justify-content: center;
 
@@ -658,7 +692,8 @@ header nav button {
   border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* GLOW BORDER */
+
+/* === GLOW EFFECT === */
 .card::before {
   content: "";
   position: absolute;
@@ -667,6 +702,8 @@ header nav button {
   padding: 2px;
 
   background: linear-gradient(45deg, #7cf, #c7f, #7cf);
+
+  /* laver “border glow” */
   -webkit-mask:
           linear-gradient(#000 0 0) content-box,
           linear-gradient(#000 0 0);
@@ -677,17 +714,19 @@ header nav button {
   transition: 0.4s;
 }
 
+/* glow vises når card er aktivt */
 .card.active::before {
   opacity: 1;
 }
 
-/* CENTER CARD */
+/* center card */
 .card.active {
   transform: scale(1) rotateY(0deg);
   opacity: 1;
 }
 
 
+/* === RESPONSIVE CAROUSEL === */
 @media (max-width: 768px) {
   .carousel {
     padding-left: 20px;
@@ -695,26 +734,30 @@ header nav button {
   }
 
   .card {
-    flex: 0 0 80%;
+    flex: 0 0 80%; /* fylder mere på mobil */
   }
 }
 
+
+/* smooth scroll */
 html {
   scroll-behavior: smooth;
 }
 
+/* offset pga navbar */
 section {
   scroll-margin-top: 140px;
 }
 
 
+/* === SKILLS SECTION === */
 .skills {
   background: #fff;
   padding: 60px 0;
   overflow: hidden;
 }
 
-/* TRACK */
+/* scrolling track */
 .skills__track {
   display: flex;
   gap: 50px;
@@ -722,7 +765,7 @@ section {
   animation: scrollSkills 25s linear infinite;
 }
 
-/* ITEM */
+/* skill item */
 .skill {
   display: flex;
   flex-direction: column;
@@ -745,7 +788,7 @@ section {
   color: #000;
 }
 
-/* HOVER (kun desktop) */
+/* hover effekt (kun desktop) */
 @media (hover: hover) {
   .skill:hover {
     opacity: 1;
@@ -753,7 +796,7 @@ section {
   }
 }
 
-/* ANIMATION */
+/* animation */
 @keyframes scrollSkills {
   from {
     transform: translateX(0);
@@ -763,19 +806,21 @@ section {
   }
 }
 
+
+/* grid version af skills */
 .skills__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 40px;
 
-  max-width: 1000px;   /* stopper den fra at blive for bred */
-  margin: 0 auto;      /* centrerer */
-  padding: 0 20px;     /* luft i siderne */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .skills__grid img {
   width: 100%;
-  max-width: 120px;   /* styrer størrelse */
+  max-width: 120px;
   height: auto;
 
   object-fit: contain;
@@ -783,32 +828,22 @@ section {
 }
 
 
-
-
-
-
-
-
-
-
-
+/* === FOOTER === */
 footer {
   border-top: 1px solid #ccc;
   padding-top: 20px;
 }
 
 
-
-
-
+/* === SCROLL TO TOP BUTTON === */
 #scrollTopBtn {
   position: fixed;
   bottom: 30px;
   right: 30px;
+
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: none;
 
   background: rgba(0,0,0,0.6);
   color: #fff;
@@ -819,7 +854,7 @@ footer {
 
   transition: 0.3s ease;
 
-  opacity: 0;
+  opacity: 0; /* skjult */
   pointer-events: none;
 
   z-index: 9999;
@@ -831,50 +866,50 @@ footer {
 }
 
 
-
-
-
-
+/* === PROJECT CASE === */
 .project-case {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 80px;
 
-  padding: 140px 8vw;
+  padding: 100px 8vw;
   background: #fff;
 }
 
-/* LEFT */
+/* venstre side */
 .project-left {
   margin-top: 40px;
 }
 
+/* nummer */
 .project-number {
   font-size: 90px;
   font-weight: 700;
+  color: #000000;
 }
 
+/* titel */
 .project-left h2 {
   margin-top: 30px;
   font-size: 26px;
 }
 
+/* tekst */
 .project-left p {
   margin-top: 15px;
   line-height: 1.6;
   color: #555;
 }
 
-/* RIGHT (første billede) */
+/* billede */
 .project-image img {
   width: 100%;
   display: block;
 }
 
-/* 🔥 FULL WIDTH BILLEDE */
+/* full width billede */
 .project-full {
   grid-column: 1 / -1;
-  margin-top: 100px;
 }
 
 .project-full img {
@@ -882,10 +917,7 @@ footer {
   display: block;
 }
 
-.project-number {
-  color: #000;
-}
-
+/* divider */
 .project-divider {
   width: 100%;
   height: 1px;
@@ -893,20 +925,17 @@ footer {
 }
 
 
-
-/* 🔥 REVERSE LAYOUT */
+/* === REVERSE LAYOUT === */
 .project-case.reverse {
   display: grid;
   grid-template-columns: 2fr 1fr;
   align-items: end;
 }
 
-/* sørger for korrekt placering */
+/* placering */
 .project-case.reverse .project-right {
   grid-column: 1;
-
 }
-
 
 .project-case.reverse .project-left {
   grid-column: 2;
@@ -924,6 +953,9 @@ footer {
 .project-case.reverse .project-full {
   grid-row: 2;
 }
+
+
+/* === RESPONSIVE PROJECTS === */
 @media (max-width: 900px) {
 
   .project-case,
@@ -931,15 +963,15 @@ footer {
     grid-template-columns: 1fr;
     padding: 80px 20px;
 
-    display: flex;           /* 🔥 ændrer fra grid til flex på mobil */
+    display: flex; /* skifter til flex */
     flex-direction: column;
-    align-items: center;     /* 🔥 centrerer ALT */
+    align-items: center; /* centrerer */
   }
 
   .project-left {
     text-align: center;
     width: 100%;
-    max-width: 500px;        /* 🔥 gør det ser clean ud */
+    max-width: 500px;
     margin: 0 auto;
   }
 
@@ -952,4 +984,3 @@ footer {
   }
 
 }
-
