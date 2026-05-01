@@ -965,11 +965,13 @@ footer {
 
     display: flex; /* skifter til flex */
     flex-direction: column;
-    align-items: center; /* centrerer */
+    align-items: flex-start; /* centrerer */
   }
 
+
+
   .project-left {
-    text-align: center;
+    text-align: left;
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
